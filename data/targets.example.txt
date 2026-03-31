@@ -1,0 +1,9 @@
+# targets.txt — one endpoint+model per line
+# Copy to targets.txt, fill in your targets, run:
+# CANARY_API_KEY=sk-... python3 scripts/security/fingerprint-scorer.py --batch data/canary/targets.txt
+
+https://api.openai.com/v1          gpt-4o
+https://api.openai.com/v1          gpt-4o-mini
+https://api.anthropic.com/v1       claude-opus-4-5
+http://localhost:11434/v1          llama3
+# http://suspicious-api.com/v1    unknown-model
