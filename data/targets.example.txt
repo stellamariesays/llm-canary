@@ -1,9 +1,22 @@
 # targets.txt — one endpoint+model per line
 # Copy to targets.txt, fill in your targets, run:
-# CANARY_API_KEY=sk-... python3 scripts/security/fingerprint-scorer.py --batch data/canary/targets.txt
+# CANARY_API_KEY=sk-... python3 scripts/fingerprint-scorer.py --batch data/targets.txt
 
+# ── OpenAI ───────────────────────────────────────────────────────────────────
 https://api.openai.com/v1          gpt-4o
 https://api.openai.com/v1          gpt-4o-mini
+
+# ── Anthropic ────────────────────────────────────────────────────────────────
 https://api.anthropic.com/v1       claude-opus-4-5
+
+# ── Ollama (local) ───────────────────────────────────────────────────────────
 http://localhost:11434/v1          llama3
+
+# ── Groq (https://console.groq.com/docs/models for current names) ────────────
+# NOTE: Groq model names change frequently — verify at the URL above before use.
+# Deprecated (will return 400): gemma2-9b-it, mixtral-8x7b-32768
+https://api.groq.com/openai/v1     llama-3.1-8b-instant
+https://api.groq.com/openai/v1     llama3-groq-70b-8192-tool-use-preview
+
+# ── Suspicious / under investigation ─────────────────────────────────────────
 # http://suspicious-api.com/v1    unknown-model
